@@ -1,7 +1,11 @@
 <html>
 <head>
 <link href="bootstrap.css" rel="stylesheet">
- <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+    <link href="assets/css/docs.css" rel="stylesheet">
+   
+
+   <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+    <script src="http://autobahn.tablesorter.com/jquery.tablesorter.min.js"></script>
     <script src="assets/js/google-code-prettify/prettify.js"></script>
     <script>$(function () { prettyPrint() })</script>
     <script src="js/bootstrap-modal.js"></script>
@@ -13,6 +17,12 @@
     <script src="js/bootstrap-scrollspy.js"></script>
     <script src="js/bootstrap-tabs.js"></script>
     <script src="js/bootstrap-buttons.js"></script>
+	
+	  <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/ico/bootstrap-apple-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/ico/bootstrap-apple-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/bootstrap-apple-114x114.png">
 	
 	   <style type="text/css">
       body {
@@ -38,11 +48,13 @@
  <div class="container-fluid">
       <div class="sidebar">
         <div class="well">
+		<h2> Info </h2>
+		<p>Info about dsfsdfs  sdfsdf f sfdfsddf sfsdf sd hndfg dfgh </p>
 		</div>
 		</div>
  <div class="content">
           <h3>Litt div testing</h3>
-          <a href="#" class="btn danger" rel="popover" title="A title" data-content="And here's some amazing content. It's very engaging. right?">hover for popover</a>
+          <a href="#" class="btn info" rel="popover" title="Poppop" data-content="And here's some amazing content. It's very engaging. right?">hover for popover</a>
           <script>
             $(function () {
               $("a[rel=popover]")
@@ -54,6 +66,104 @@
                 })
             })
           </script>
+		  
+		            <h3>Demo</h3>
+          <!-- sample modal content -->
+          <div id="modal-from-dom" class="modal hide fade">
+            <div class="modal-header">
+              <a href="#" class="close">&times;</a>
+              <h3>Modal Heading</h3>
+            </div>
+            <div class="modal-body">
+
+              <p>Tralla la</p>
+            </div>
+            <div class="modal-footer">
+			<div class="btn info">
+              <a href="#" class="close">Close</a>
+            </div>
+			</div>
+          </div>
+
+          <button data-controls-modal="modal-from-dom" data-backdrop="true" data-keyboard="true" class="btn danger">Launch Modal</button>
+		  
+		  <h3>Demo</h3>
+          <ul class="tabs" data-tabs="tabs">
+
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#profile">Profile</a></li>
+
+            <li><a href="#messages">Messages</a></li>
+            <li><a href="#settings">Settings</a></li>
+            <li class="dropdown" data-dropdown="dropdown">
+              <a href="#" class="dropdown-toggle">Dropdown</a>
+
+              <ul class="dropdown-menu">
+                <li><a href="#fat">@fat</a></li>
+                <li><a href="#mdo">@mdo</a></li>
+
+              </ul>
+            </li>
+          </ul>
+          <div id="my-tab-content" class="tab-content">
+
+            <div class="active tab-pane" id="home">
+              <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+            </div>
+            <div class="tab-pane" id="profile">
+
+              <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+            </div>
+            <div class="tab-pane" id="messages">
+
+              <p>Banksy do proident, brooklyn photo booth delectus sunt artisan sed organic exercitation eiusmod four loko. Quis tattooed iphone esse aliqua. Master cleanse vero fixie mcsweeney's. Ethical portland aute, irony food truck pitchfork lomo eu anim. Aesthetic blog DIY, ethical beard leggings tofu consequat whatever cardigan nostrud. Helvetica you probably haven't heard of them carles, marfa veniam occaecat lomo before they sold out in shoreditch scenester sustainable thundercats. Consectetur tofu craft beer, mollit brunch fap echo park pitchfork mustache dolor.</p>
+            </div>
+            <div class="tab-pane" id="settings">
+              <p>Sunt qui biodiesel mollit officia, fanny pack put a bird on it thundercats seitan squid ad wolf bicycle rights blog. Et aute readymade farm-to-table carles 8-bit, nesciunt nulla etsy adipisicing organic ea. Master cleanse mollit high life, next level Austin nesciunt american apparel twee mustache adipisicing reprehenderit hoodie portland irony. Aliqua tofu quinoa +1 commodo eiusmod. High life williamsburg cupidatat twee homo leggings. Four loko vinyl DIY consectetur nisi, marfa retro keffiyeh vegan. Fanny pack viral retro consectetur gentrify fap.</p>
+
+            </div>
+            <div class="tab-pane" id="fat">
+              <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+
+            </div>
+            <div class="tab-pane" id="mdo">
+              <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+            </div>
+          </div>
+
+		        <h3>Example: Zebra-striped w/ TableSorter.js</h3>
+      <p>Taking the previous example, we improve the usefulness of our tables by providing sorting functionality via <a href="http://jquery.com">jQuery</a> and the <a href="http://tablesorter.com/docs/">Tablesorter</a> plugin. <strong>Click any column’s header to change the sort.</strong></p>
+      <table class="zebra-striped" id="sortTableExample">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th class="yellow">First Name</th>
+            <th class="blue">Last Name</th>
+            <th class="green">Language</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Your</td>
+            <td>One</td>
+            <td>English</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Joe</td>
+            <td>Sixpack</td>
+            <td>English</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Stu</td>
+            <td>Dent</td>
+            <td>Code</td>
+          </tr>
+        </tbody>
+      </table>
+
 		  </div>
 		  </div>
 </body>
