@@ -1,0 +1,60 @@
+<html>
+<head>
+<link href="bootstrap.css" rel="stylesheet">
+ <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script>$(function () { prettyPrint() })</script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-alerts.js"></script>
+	
+	 <script src="js/bootstrap-twipsy.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tabs.js"></script>
+    <script src="js/bootstrap-buttons.js"></script>
+	
+	   <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+</head>
+<body>
+<div class="topbar">
+      <div class="topbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="#">Project name</a>
+
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+ <div class="container-fluid">
+      <div class="sidebar">
+        <div class="well">
+		</div>
+		</div>
+ <div class="content">
+          <h3>Litt div testing</h3>
+          <a href="#" class="btn danger" rel="popover" title="A title" data-content="And here's some amazing content. It's very engaging. right?">hover for popover</a>
+          <script>
+            $(function () {
+              $("a[rel=popover]")
+                .popover({
+                  offset: 10
+                })
+                .click(function(e) {
+                  e.preventDefault()
+                })
+            })
+          </script>
+		  </div>
+		  </div>
+</body>
+</html>
