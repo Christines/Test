@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<HTA:APPLICATION ID="nexiles_startcenter" 
+    APPLICATIONNAME="nexiles.startcenter" 
+	BORDER="dialog"
+    CAPTION="yes"
+	SCROLL="no"
+    ICON="resources/images/nexiles.ico"
+    SHOWINTASKBAR="yes"
+    SINGLEINSTANCE="yes"
+	MINIMIZEBUTTON="yes"
+	MAXIMIZEBUTTON="no"
+	SELECTION="no"
+    SYSMENU="yes"
+    WINDOWSTATE="normal">
+</HTA:APPLICATION>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="expires" content="0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Le styles -->
+    <link href="bootstrap.css" rel="stylesheet">
+     <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+			<script>
+function startRead()
+{
+  // obtain input element through DOM 
+
+  var file = document.getElementById('file');
+  if(file)
+	{
+    getAsText(file);
+  }
+}
+
+function getAsText(readFile)
+{
+	var reader;
+	try
+	{
+    reader = new FileReader();
+	}catch(e)
+	{
+		document.getElementById('output').innerHTML =
+			"Error: seems File API is not supported on your browser";
+	  return;
+  }
+
+  // Read file into memory as UTF-8
+  reader.readAsText(readFile, "UTF-8");
+
+  // Handle progress, success, and errors
+  reader.onprogress = updateProgress;
+  reader.onload = loaded;
+  reader.onerror = errorHandler;
+}
+
+function updateProgress(evt)
+{
+  if (evt.lengthComputable)
+	{
+    // evt.loaded and evt.total are ProgressEvent properties
+    var loaded = (evt.loaded / evt.total);
+    if (loaded < 1)
+		{
+      // Increase the prog bar length
+      // style.width = (loaded * 200) + "px";
+			document.getElementById("bar").style.width = (loaded*100) + "%";
+    }
+  }
+}
+
+function loaded(evt)
+{
+  // Obtain the read file data
+  var fileString = evt.target.result;
+  document.getElementById('output').innerHTML = fileString;
+		document.getElementById("bar").style.width = 100 + "%";
+}
+
+function errorHandler(evt)
+{
+  if(evt.target.error.code == evt.target.error.NOT_READABLE_ERR)
+	{
+    // The file could not be read
+		document.getElementById('output').innerHTML = "Error reading file..."
+  }
+}
+		</script>
+  </head>
+
+  <body>
+  <div class="topbar-wrapper" style="z-index: 5;">
+<div class="topbar" data-dropdown="dropdown">
+      <div class="topbar-inner">
+          <div class="container">
+          <h3><a href="#">Bootstrap testing </a></h3>
+          <ul class="nav">
+             <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Select config</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Config1</a></li>
+                <li><a href="#">Config2</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Another link</a></li>
+              </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+		</div>
+      </div>
+    </div>
+ </div>
+ 
+ <div class ="container-fluid">
+   <div class="sidebar">
+<div class="well" style="padding: 14px 19px;">
+
+
+          <ul class="unstyled">
+		   <h2>Meny</h2>
+            <li><input id="file" type="file" multiple onchange="startRead()"></li>
+            <li> <button class="btn info">Choice 2</button></li>
+			<li> <button class="btn info">Choice 3</button></li>
+			<li> <button class="btn info">Choice 4</button></li>
+
+          </ul>
+ </div>
+ </div>
+ <div class="content">
+ <div class="well">
+<code id="output">
+			</code>
+<span class="label warning">Warning</span>
+ </div>
+ </div>
+ </div>
+ 
+    <!-- Le javascript -->
+    <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+    <script src="http://autobahn.tablesorter.com/jquery.tablesorter.min.js"></script>
+    <script src="js/prettify.js"></script>
+    <script>$(function () { prettyPrint() })</script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-twipsy.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/application.js"></script>
+
+    <script type="text/javascript">
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+  </body>
+</html>
